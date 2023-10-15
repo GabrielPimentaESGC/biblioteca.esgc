@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Atividade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h2 {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        select {
+            height: 40px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registro de Atividade</h2>
+    <form action="consultar.php" method="POST">
+        <label for="processo">Número de Processo:</label>
+        <input type="text" name="processo" id="processo" required>
+
+        <label for="atividade">Atividade:</label>
+        <select name="atividade" id="atividade">
+            <option value="Extracurricular">Extracurricular</option>
+            <option value="Ler">Ler</option>
+            <option value="Computador">Computador</option>
+            <option value="Estudar">Estudar</option>
+        </select>
+
+        <input type="submit" value="Buscar Aluno">
+    </form>
+</body>
+</html>
