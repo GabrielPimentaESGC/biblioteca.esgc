@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Registro de Atividade</title>
+    <title>Exportar Dados</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
         }
-        
+
         h2 {
             background-color: #333;
             color: #fff;
@@ -29,19 +29,15 @@
 
         label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 20px;
         }
 
-        input, select {
+        input[type="date"] {
             width: 100%;
             padding: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 4px;
-        }
-
-        select {
-            height: 40px;
         }
 
         input[type="submit"] {
@@ -51,29 +47,21 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <h2>Registro de Atividade</h2>
-    <form action="consultar.php" method="POST">
-        <label for="processo">Número de Processo:</label>
-        <input type="text" name="processo" id="processo" style="width: 94.5%;" required>
+    <h2>Exportar Dados</h2>
+    <form action="gerar_exportacao.php" method="POST">
+        <label for="data_inicial">Data Inicial:</label>
+        <input type="date" name="data_inicial" id="data_inicial" required>
 
-        <label for="atividade">Atividade:</label>
-        <select name="atividade" id="atividade">
-            <option value="Extracurricular">Extracurricular</option>
-            <option value="Ler">Ler</option>
-            <option value="Computador">Computador</option>
-            <option value="Estudar">Estudar</option>
-        </select>
+        <label for="data_final">Data Final:</label>
+        <input type="date" name="data_final" id="data_final" required>
 
-        <input type="submit" value="Buscar Aluno">
-    </form>
-
-    <!-- Botão de exportação de dados -->
-    <form action="exportar.php" method="GET">
-        <input type="submit" value="Exportar Dados">
+        <input type="hidden" name="formato" value="excel">
+        <input type="submit" value="Exportar">
     </form>
 </body>
 </html>

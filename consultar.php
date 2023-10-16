@@ -115,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             }
             if ($registroEfetuado) {
-                echo '<img src="Gif.gif" alt="Confirmação">';
+                echo '<img src="assets/Gif.gif" alt="Confirmação">';
             }
         } else {
             echo "Número de processo não encontrado!";
@@ -128,6 +128,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <button type="submit" name="confirmar" class="confirm-button">Confirmar Dados</button>
             </form>
         <?php } ?>
+        
+        <!-- Botão Adicionado Abaixo do GIF -->
+        <button type="button" class="confirm-button" onclick="location.href='index.html'">Voltar ao menu principal</button>
     </div>
 </body>
 </html>
