@@ -49,19 +49,30 @@
             cursor: pointer;
             width: 100%;
         }
+        .btn-menu {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <h2>Exportar Dados</h2>
     <form action="gerar_exportacao.php" method="POST">
         <label for="data_inicial">Data Inicial:</label>
-        <input type="date" name="data_inicial" id="data_inicial" required>
+        <input type="date" name="data_inicial" id="data_inicial" required style="width: 94.5%;">
 
         <label for="data_final">Data Final:</label>
-        <input type="date" name="data_final" id="data_final" required>
+        <input type="date" name="data_final" id="data_final" required style="width: 94.5%;">
 
         <input type="hidden" name="formato" value="excel">
         <input type="submit" value="Exportar">
+        <button class="btn-menu" onclick="window.location.href='index.html'">Voltar ao menu principal</button>
     </form>
 </body>
 </html>
